@@ -1,4 +1,44 @@
-<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:media="http://search.yahoo.com/mrss/" version="2.0"><channel><title>In a cave, with a box of scraps</title><description>An account of my journey to become a software engineer. </description><link>http://localhost:2368/</link><generator>Ghost 0.7</generator><lastBuildDate>Tue, 17 May 2016 00:21:09 GMT</lastBuildDate><atom:link href="http://localhost:2368/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title>I figured this out...after fumbling a bit</title><description>&lt;p&gt;Well.. I've mastered blogs. Or at least how to repeatedly type &lt;code&gt;buster deploy&lt;/code&gt;. &lt;/p&gt;
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:media="http://search.yahoo.com/mrss/" version="2.0"><channel><title>In a cave, with a box of scraps</title><description>An account of my journey to become a software engineer. </description><link>http://localhost:2368/</link><generator>Ghost 0.7</generator><lastBuildDate>Tue, 17 May 2016 20:16:48 GMT</lastBuildDate><atom:link href="http://localhost:2368/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title>It's a marathon, not a sprint...I sprint marathons</title><description>&lt;p&gt;&lt;strong&gt;CONTEXT&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Back when I was in college (and in a fraternity), people really seemed to like Jimmy Tatro&lt;/p&gt;
+
+&lt;p&gt;The video is ridiculous. So just skip to 2:50 so that you can be in on the inside joke. &lt;br&gt;
+&lt;a href="https://www.youtube.com/watch?v=Fbsk127TnnE"&gt;https://www.youtube.com/watch?v=Fbsk127TnnE&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;CONTENT&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Ok, well now that&lt;/p&gt;</description><link>http://localhost:2368/its-a-marathon-not-a-sprint-i-sprint-marathons/</link><guid isPermaLink="false">79a4e4ab-a3d3-4f74-a2da-9c52d44378b1</guid><dc:creator>Alex Stark</dc:creator><pubDate>Tue, 17 May 2016 20:16:40 GMT</pubDate><content:encoded>&lt;p&gt;&lt;strong&gt;CONTEXT&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Back when I was in college (and in a fraternity), people really seemed to like Jimmy Tatro&lt;/p&gt;
+
+&lt;p&gt;The video is ridiculous. So just skip to 2:50 so that you can be in on the inside joke. &lt;br&gt;
+&lt;a href="https://www.youtube.com/watch?v=Fbsk127TnnE"&gt;https://www.youtube.com/watch?v=Fbsk127TnnE&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;CONTENT&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Ok, well now that we're on the same page(and becoming fast friends!)...&lt;/p&gt;
+
+&lt;p&gt;Hack Reactor is known to be intense and I want to be over-prepared. It is a marathon, but if I can run 2 or 3 miles at a 15 minute pace before the race even starts, then I might be able to take a few breaths. &lt;/p&gt;
+
+&lt;p&gt;My degree is in Chemical Engineering and though I took a CS class, I really don't remember it. Today, I am going to try to cram in some CS knowledge. &lt;/p&gt;
+
+&lt;p&gt;When I ask my CS friends what I should learn...they say: "algorithms and data structures". That's a starting point. &lt;/p&gt;
+
+&lt;p&gt;Let's break down how to approach these items:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Algorithms
+&lt;ul&gt;&lt;li&gt;Search&lt;/li&gt;
+&lt;li&gt;Sort&lt;/li&gt;&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;Data Structures
+&lt;ul&gt;&lt;li&gt;Singly and Doubly linked lists&lt;/li&gt;
+&lt;li&gt;Stack and Queue&lt;/li&gt;
+&lt;li&gt;Heap&lt;/li&gt;
+&lt;li&gt;Binary search trees&lt;/li&gt;
+&lt;li&gt;Graphs&lt;/li&gt;&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;I'm not sure what all of these are...so I am going to make another post with a learning plan. This post will hopefully capture any knowledge that I gain along the way!&lt;/p&gt;</content:encoded></item><item><title>I figured this out...after fumbling a bit</title><description>&lt;p&gt;Well.. I've mastered blogs. Or at least how to repeatedly type &lt;code&gt;buster deploy&lt;/code&gt;. &lt;/p&gt;
 
 &lt;p&gt;Thank you to this article here : &lt;a href="http://blog.sunnyg.io/2015/09/24/ghost-with-github/"&gt;http://blog.sunnyg.io/2015/09/24/ghost-with-github/&lt;/a&gt; &lt;/p&gt;
 
@@ -17,69 +57,4 @@
 &lt;li&gt;if you already had a username.github.io repository, go ahead and delete it. Start a new one.&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;The purpose of this blog will be to capture my learnings as a part of the HR 44 cohort! I am excited, nervous, and extremely ready to go...&lt;/p&gt;</content:encoded></item><item><title>Welcome to Ghost</title><description>&lt;p&gt;You're live! Nice. We've put together a little post to introduce you to the Ghost editor and get you started. You can manage your content by signing in to the admin area at &lt;code&gt;&amp;lt;your blog URL&amp;gt;/ghost/&lt;/code&gt;. When you arrive, you can select this post from a list&lt;/p&gt;</description><link>http://localhost:2368/welcome-to-ghost/</link><guid isPermaLink="false">2e4b7411-9a0a-4ef0-9323-bb02464df228</guid><category>Getting Started</category><dc:creator>Alex Stark</dc:creator><pubDate>Mon, 16 May 2016 22:10:24 GMT</pubDate><content:encoded>&lt;p&gt;You're live! Nice. We've put together a little post to introduce you to the Ghost editor and get you started. You can manage your content by signing in to the admin area at &lt;code&gt;&amp;lt;your blog URL&amp;gt;/ghost/&lt;/code&gt;. When you arrive, you can select this post from a list on the left and see a preview of it on the right. Click the little pencil icon at the top of the preview to edit this post and read the next section!&lt;/p&gt;
-
-&lt;h2 id="gettingstarted"&gt;Getting Started&lt;/h2&gt;
-
-&lt;p&gt;Ghost uses something called Markdown for writing. Essentially, it's a shorthand way to manage your post formatting as you write!&lt;/p&gt;
-
-&lt;p&gt;Writing in Markdown is really easy. In the left hand panel of Ghost, you simply write as you normally would. Where appropriate, you can use &lt;em&gt;shortcuts&lt;/em&gt; to &lt;strong&gt;style&lt;/strong&gt; your content. For example, a list:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Item number one&lt;/li&gt;
-&lt;li&gt;Item number two
-&lt;ul&gt;&lt;li&gt;A nested item&lt;/li&gt;&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;A final item&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;or with numbers!&lt;/p&gt;
-
-&lt;ol&gt;
-&lt;li&gt;Remember to buy some milk  &lt;/li&gt;
-&lt;li&gt;Drink the milk  &lt;/li&gt;
-&lt;li&gt;Tweet that I remembered to buy the milk, and drank it&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h3 id="links"&gt;Links&lt;/h3&gt;
-
-&lt;p&gt;Want to link to a source? No problem. If you paste in a URL, like &lt;a href="http://ghost.org"&gt;http://ghost.org&lt;/a&gt; - it'll automatically be linked up. But if you want to customise your anchor text, you can do that too! Here's a link to &lt;a href="http://ghost.org"&gt;the Ghost website&lt;/a&gt;. Neat.&lt;/p&gt;
-
-&lt;h3 id="whataboutimages"&gt;What about Images?&lt;/h3&gt;
-
-&lt;p&gt;Images work too! Already know the URL of the image you want to include in your article? Simply paste it in like this to make it show up:&lt;/p&gt;
-
-&lt;p&gt;&lt;img src="https://ghost.org/images/ghost.png" alt="The Ghost Logo"&gt;&lt;/p&gt;
-
-&lt;p&gt;Not sure which image you want to use yet? That's ok too. Leave yourself a descriptive placeholder and keep writing. Come back later and drag and drop the image in to upload:&lt;/p&gt;
-
-&lt;h3 id="quoting"&gt;Quoting&lt;/h3&gt;
-
-&lt;p&gt;Sometimes a link isn't enough, you want to quote someone on what they've said. Perhaps you've started using a new blogging platform and feel the sudden urge to share their slogan? A quote might be just the way to do it!&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;Ghost - Just a blogging platform&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;h3 id="workingwithcode"&gt;Working with Code&lt;/h3&gt;
-
-&lt;p&gt;Got a streak of geek? We've got you covered there, too. You can write inline &lt;code&gt;&amp;lt;code&amp;gt;&lt;/code&gt; blocks really easily with back ticks. Want to show off something more comprehensive? 4 spaces of indentation gets you there.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;.awesome-thing {
-    display: block;
-    width: 100%;
-}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h3 id="readyforabreak"&gt;Ready for a Break?&lt;/h3&gt;
-
-&lt;p&gt;Throw 3 or more dashes down on any new line and you've got yourself a fancy new divider. Aw yeah.&lt;/p&gt;
-
-&lt;hr&gt;
-
-&lt;h3 id="advancedusage"&gt;Advanced Usage&lt;/h3&gt;
-
-&lt;p&gt;There's one fantastic secret about Markdown. If you want, you can write plain old HTML and it'll still work! Very flexible.&lt;/p&gt;
-
-&lt;p&gt;&lt;input type="text" placeholder="I'm an input field!"&gt;&lt;/p&gt;
-
-&lt;p&gt;That should be enough to get you started. Have fun - and let us know what you think :)&lt;/p&gt;</content:encoded></item></channel></rss>
+&lt;p&gt;The purpose of this blog will be to capture my learnings as a part of the HR 44 cohort! I am excited, nervous, and extremely ready to go...&lt;/p&gt;</content:encoded></item></channel></rss>
