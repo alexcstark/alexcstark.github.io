@@ -1,4 +1,43 @@
-<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:media="http://search.yahoo.com/mrss/" version="2.0"><channel><title>In a cave, with a box of scraps</title><description>An account of my journey to become a software engineer. </description><link>http://localhost:2368/</link><generator>Ghost 0.7</generator><lastBuildDate>Tue, 17 May 2016 20:16:48 GMT</lastBuildDate><atom:link href="http://localhost:2368/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title>It's a marathon, not a sprint...I sprint marathons</title><description>&lt;p&gt;&lt;strong&gt;CONTEXT&lt;/strong&gt;&lt;/p&gt;
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:media="http://search.yahoo.com/mrss/" version="2.0"><channel><title>In a cave, with a box of scraps</title><description>An account of my journey to become a software engineer. </description><link>http://localhost:2368/</link><generator>Ghost 0.7</generator><lastBuildDate>Sat, 21 May 2016 15:24:48 GMT</lastBuildDate><atom:link href="http://localhost:2368/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title>Pre - HR Learning Plan</title><description>&lt;p&gt;As I described in my last post, CS knowledge is something I want to get ahead of. &lt;/p&gt;
+
+&lt;p&gt;Let's jot down a few areas to study and come up with a plan. PS - if no one reads this then I'm really just talking to myself; which isn't abnormal, I'm just&lt;/p&gt;</description><link>http://localhost:2368/pre-hr-learning-plan/</link><guid isPermaLink="false">c44cb5a7-2f49-49ee-959f-3b55656dbeea</guid><dc:creator>Alex Stark</dc:creator><pubDate>Sat, 21 May 2016 15:24:38 GMT</pubDate><content:encoded>&lt;p&gt;As I described in my last post, CS knowledge is something I want to get ahead of. &lt;/p&gt;
+
+&lt;p&gt;Let's jot down a few areas to study and come up with a plan. PS - if no one reads this then I'm really just talking to myself; which isn't abnormal, I'm just realizing it now :). &lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Learning Plan&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;  
+  &lt;li&gt;Computer Science-y Things&lt;/li&gt;
+    &lt;ul&gt; 
+        &lt;li&gt;Algorithms&lt;/li&gt;
+        &lt;ul&gt; 
+          &lt;li&gt;Search&lt;/li&gt; 
+          &lt;li&gt;Sort&lt;/li&gt;
+        &lt;/ul&gt;
+        &lt;li&gt;Data Structures&lt;/li&gt;
+         &lt;ul&gt; 
+          &lt;li&gt;Lists, trees, graphs&lt;/li&gt; 
+        &lt;/ul&gt;
+    &lt;/ul&gt;
+  &lt;li&gt;Review of Precourse&lt;/li&gt;
+    &lt;ul&gt; 
+        &lt;li&gt;Underbar&lt;/li&gt; 
+        &lt;li&gt;Recursion&lt;/li&gt;
+        &lt;li&gt;Code Wars&lt;/li&gt;
+        &lt;li&gt;Front End (HTML, CSS, jQuery)&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;li&gt; Framework Familiarization &lt;/li&gt;
+    &lt;ul&gt; 
+        &lt;li&gt;BackboneJS&lt;/li&gt;
+        &lt;li&gt;AngularJS&lt;/li&gt; 
+        &lt;li&gt;React&lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;I'll try to make a post reviewing each of these...but they may just be built slowly over time!&lt;/p&gt;
+
+&lt;p&gt;Good Resources &lt;br&gt;
+- &lt;a href="http://khan4019.github.io/front-end-Interview-Questions/"&gt;http://khan4019.github.io/front-end-Interview-Questions/&lt;/a&gt;&lt;/p&gt;</content:encoded></item><item><title>It's a marathon, not a sprint...I sprint marathons</title><description>&lt;p&gt;&lt;strong&gt;CONTEXT&lt;/strong&gt;&lt;/p&gt;
 
 &lt;p&gt;Back when I was in college (and in a fraternity), people really seemed to like Jimmy Tatro&lt;/p&gt;
 
