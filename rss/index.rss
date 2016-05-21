@@ -1,4 +1,86 @@
-<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:media="http://search.yahoo.com/mrss/" version="2.0"><channel><title>In a cave, with a box of scraps</title><description>An account of my journey to become a software engineer. </description><link>http://localhost:2368/</link><generator>Ghost 0.7</generator><lastBuildDate>Sat, 21 May 2016 15:24:48 GMT</lastBuildDate><atom:link href="http://localhost:2368/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title>Pre - HR Learning Plan</title><description>&lt;p&gt;As I described in my last post, CS knowledge is something I want to get ahead of. &lt;/p&gt;
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:media="http://search.yahoo.com/mrss/" version="2.0"><channel><title>In a cave, with a box of scraps</title><description>An account of my journey to become a software engineer. </description><link>http://localhost:2368/</link><generator>Ghost 0.7</generator><lastBuildDate>Sat, 21 May 2016 15:44:46 GMT</lastBuildDate><atom:link href="http://localhost:2368/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title>My journey to HR</title><description>&lt;p&gt;I think it's important to note that I did not pass the technical interview the first time...or the second time. &lt;/p&gt;
+
+&lt;p&gt;Getting into HR required a lot of studying. I &lt;strong&gt;did not&lt;/strong&gt; remotely think that I would be this far along before even starting a bootcamp. It really seems like&lt;/p&gt;</description><link>http://localhost:2368/my-journey-to-hr/</link><guid isPermaLink="false">bb08dc59-df15-4a35-a46d-b86c5a2ac048</guid><dc:creator>Alex Stark</dc:creator><pubDate>Sat, 21 May 2016 15:44:42 GMT</pubDate><content:encoded>&lt;p&gt;I think it's important to note that I did not pass the technical interview the first time...or the second time. &lt;/p&gt;
+
+&lt;p&gt;Getting into HR required a lot of studying. I &lt;strong&gt;did not&lt;/strong&gt; remotely think that I would be this far along before even starting a bootcamp. It really seems like  you need to be able to make use of all the free resources out there, and then HR will fill in the gaps. &lt;/p&gt;
+
+&lt;p&gt;I first applied in January 2016. I bombed the technical interview. I got so nervous and choked up. My mind went blank. It was not my best work. &lt;/p&gt;
+
+&lt;p&gt;So I went to studying. I studied higher order functions, HTML, CSS, jQuery, Node, Express...I went way overboard on non-essentials. &lt;/p&gt;
+
+&lt;p&gt;I decided I needed more guidance and entered Fulcrum. Fulcrum is amazing. I highly recommend it. Fulcrum helps you get up to speed on exactly what you need to know in regards to Javascript fundamentals. If you're serious about attending Hack Reactor, I can't recommend Fulcrum highly enough. &lt;/p&gt;
+
+&lt;p&gt;I prepared like crazy for the technical interview and memorized many many underscore functions. Bad idea. They care about problem solving, not memorization. I did not pass the second interview: I choked, I panicked, I blanked. &lt;/p&gt;
+
+&lt;p&gt;There's an underrated and under-appreciated skill that I had yet to develop: can you do technical work while someone else who has the answers judges you? Can you be a humble and vulnerable learner? Can you adapt to a teacher's corrections? &lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Practice this&lt;/strong&gt; &lt;/p&gt;
+
+&lt;p&gt;What made me succeed in my third interview is repeated practice of technical interviews. I reached out to all of my dev friends and did skype as well as whiteboard interviews (that were above my skill level). &lt;/p&gt;
+
+&lt;p&gt;Thank you Conrad Wimberly and Landon Schropp, two of my practice interviewers!&lt;/p&gt;
+
+&lt;p&gt;Over time, I gradually became more comfortable with that type of coding. It's different, treat it as a separate skill. &lt;/p&gt;
+
+&lt;p&gt;Hope this helps! &lt;/p&gt;</content:encoded></item><item><title>BackboneJS and ES6 application</title><description>&lt;p&gt;What I need to understand is concepts, not how to implement. &lt;/p&gt;
+
+&lt;p&gt;Thank you Matthew Platts for these videos:&lt;/p&gt;
+
+&lt;p&gt;&lt;a href="https://www.youtube.com/watch?v=vJwgIth1I_w"&gt;https://www.youtube.com/watch?v=vJwgIth1I_w&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Watch all 3 of these videos to begin to conceptualize what Backbone JS is about. &lt;/p&gt;
+
+&lt;p&gt;Here's my current understanding: &lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;BackboneJS is an ultra-lightweight, un-opinionated,&lt;/li&gt;&lt;/ul&gt;</description><link>http://localhost:2368/backbonejs/</link><guid isPermaLink="false">02f38177-29d3-454f-a534-37750bf9dfc0</guid><dc:creator>Alex Stark</dc:creator><pubDate>Sat, 21 May 2016 15:35:09 GMT</pubDate><content:encoded>&lt;p&gt;What I need to understand is concepts, not how to implement. &lt;/p&gt;
+
+&lt;p&gt;Thank you Matthew Platts for these videos:&lt;/p&gt;
+
+&lt;p&gt;&lt;a href="https://www.youtube.com/watch?v=vJwgIth1I_w"&gt;https://www.youtube.com/watch?v=vJwgIth1I_w&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Watch all 3 of these videos to begin to conceptualize what Backbone JS is about. &lt;/p&gt;
+
+&lt;p&gt;Here's my current understanding: &lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;BackboneJS is an ultra-lightweight, un-opinionated, front-end framework. &lt;/li&gt;
+&lt;li&gt;It creates representations of your database within the javascript environment. &lt;br&gt;
+&lt;ul&gt;&lt;li&gt;These representations are attached to items on the DOM so that as you change the JS representations, the DOM is also updated appropriately. &lt;/li&gt;
+&lt;li&gt;After the models have changed, Backbone sends an AJAX request to the server to make the appropriate changes in the database.&lt;/li&gt;&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;During my process of familiarization, I also happened to learn about ES6 arrow functions. &lt;/p&gt;
+
+&lt;p&gt;As you watch the videos, you'll notice that Matt needs to create static references to &lt;code&gt;this&lt;/code&gt;. He does this by doing &lt;code&gt;var self = this&lt;/code&gt; and then referencing &lt;code&gt;self&lt;/code&gt;. With ES6, we actually have a fix for this issue!&lt;/p&gt;
+
+&lt;p&gt;In the code block below, I've created two methods that showcase how es5 handles &lt;code&gt;this&lt;/code&gt; versus es6. &lt;/p&gt;
+
+&lt;pre&gt;&lt;code class="language-javascript"&gt;var _ = require("underscore");  
+var people = [  
+  {name: "Alex", age: 25},
+  {name: "Christine", age: 26}
+];
+
+var methods = {  
+  es5: function(){
+    _.each(people, function(person){
+      console.log(this); // window
+    });
+  },
+
+  es6: function(){
+    _.each(people, (person) =&amp;gt; {
+      console.log(this); // window
+    });
+  }
+}
+
+methods.es5(); // window/global object  
+methods.es6(); // methods object  
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;I'll continue to update this with more learnings! &lt;/p&gt;</content:encoded></item><item><title>Pre - HR Learning Plan</title><description>&lt;p&gt;As I described in my last post, CS knowledge is something I want to get ahead of. &lt;/p&gt;
 
 &lt;p&gt;Let's jot down a few areas to study and come up with a plan. PS - if no one reads this then I'm really just talking to myself; which isn't abnormal, I'm just&lt;/p&gt;</description><link>http://localhost:2368/pre-hr-learning-plan/</link><guid isPermaLink="false">c44cb5a7-2f49-49ee-959f-3b55656dbeea</guid><dc:creator>Alex Stark</dc:creator><pubDate>Sat, 21 May 2016 15:24:38 GMT</pubDate><content:encoded>&lt;p&gt;As I described in my last post, CS knowledge is something I want to get ahead of. &lt;/p&gt;
 
