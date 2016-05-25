@@ -1,4 +1,197 @@
-<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:media="http://search.yahoo.com/mrss/" version="2.0"><channel><title>In a cave, with a box of scraps</title><description>An account of my journey to become a software engineer. </description><link>http://localhost:2368/</link><generator>Ghost 0.7</generator><lastBuildDate>Sat, 21 May 2016 15:44:46 GMT</lastBuildDate><atom:link href="http://localhost:2368/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title>My journey to HR</title><description>&lt;p&gt;I think it's important to note that I did not pass the technical interview the first time...or the second time. &lt;/p&gt;
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:media="http://search.yahoo.com/mrss/" version="2.0"><channel><title>In a cave, with a box of scraps</title><description>An account of my journey to become a software engineer. </description><link>http://localhost:2368/</link><generator>Ghost 0.7</generator><lastBuildDate>Wed, 25 May 2016 18:11:07 GMT</lastBuildDate><atom:link href="http://localhost:2368/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title>Data structures</title><description>&lt;p&gt;I've spent some time coding out classic data structures.&lt;/p&gt;
+
+&lt;p&gt;I'll briefly cover the following:  &lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Linked list&lt;/li&gt;
+&lt;li&gt;Doubly linked list&lt;/li&gt;
+&lt;li&gt;Binary Search Tree&lt;/li&gt;
+&lt;li&gt;Graph&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;Linked List&lt;/strong&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class="language-javascript"&gt;class Node {  
+  constructor(data, next){
+    this.data = data;
+    this.next = next || null;
+  }
+}
+class LinkedList {  
+  constructor(){
+    this.head = null;
+    this.length = 0;
+  }
+
+  add(data){
+    var node&lt;/code&gt;&lt;/pre&gt;</description><link>http://localhost:2368/data-structures/</link><guid isPermaLink="false">bab506a1-5230-49f3-a558-8e9a6f12a335</guid><dc:creator>Alex Stark</dc:creator><pubDate>Wed, 25 May 2016 18:10:54 GMT</pubDate><content:encoded>&lt;p&gt;I've spent some time coding out classic data structures.&lt;/p&gt;
+
+&lt;p&gt;I'll briefly cover the following:  &lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Linked list&lt;/li&gt;
+&lt;li&gt;Doubly linked list&lt;/li&gt;
+&lt;li&gt;Binary Search Tree&lt;/li&gt;
+&lt;li&gt;Graph&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;Linked List&lt;/strong&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class="language-javascript"&gt;class Node {  
+  constructor(data, next){
+    this.data = data;
+    this.next = next || null;
+  }
+}
+class LinkedList {  
+  constructor(){
+    this.head = null;
+    this.length = 0;
+  }
+
+  add(data){
+    var node = new Node(data);
+    var current = this.head;
+    if(this.head !== null){
+      while(current.next){
+        current = current.next;
+      }
+      current.next = node;
+    } else {
+      this.head = node;
+    }
+    this.length++;
+    return this.head;
+  }
+
+  remove(index){
+    if(index &amp;lt; 0 || index &amp;gt; this.length) return "ERROR";
+
+    if(this.head === null) return "Nothing to remove";
+    if(index === 0){
+      this.head = this.head.next;
+    } else {
+      var current = this.head;
+      while(index &amp;gt; 1){
+        current = current.next;
+        index--;
+      }
+      current.next = current.next.next
+      return this.head
+    }
+  }
+}
+
+var newList = new LinkedList();  
+newList.add(1);  
+newList.add(2);  
+newList.add(3);  
+newList.remove(0);  
+console.log(newList.head);
+
+
+function generateLinkedLists(arrayofData){  
+  var nodeStorage = {};
+  arrayofData.forEach((data, i) =&amp;gt; {
+    nodeStorage['node' + i] = new Node(data);
+    if(i !== 0){
+      nodeStorage['node' + (i - 1)].next = nodeStorage['node' + i]
+    }
+  });
+  return nodeStorage['node0'];
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;strong&gt;Doubly Linked List&lt;/strong&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class="language-javascript"&gt;class Node {  
+  constructor(data, next, prev){
+    this.data = data;
+    this.next = next || null;
+    this.prev = prev || null;
+  }
+}
+class DoublyLinkedList {  
+  constructor(){
+    this.head = null;
+    this.tail = null
+    this.length = 0;
+  }
+
+  add(data){
+    var node = new Node(data);
+    var current = this.head;
+    if(this.head !== null){
+      while(current.next){
+        current = current.next;
+      }
+      current.next = node;
+      node.prev = current;
+      this.tail = node;
+    } else {
+      this.head = node;
+    }
+    this.length++;
+    return this.head;
+  }
+
+  remove(index){
+    if(index &amp;lt; 0 || index &amp;gt; this.length) return "ERROR";
+
+    if(this.head === null) return "Nothing to remove";
+    if(index === 0){
+      this.head = this.head.next;
+      this.head.prev = null;
+    } else {
+      var current = this.head;
+      while(index &amp;gt; 1){
+        current = current.next;
+        index--;
+      }
+      current.next = current.next.next;
+      current.next.next.prev = current.next;
+      return this.head
+    }
+  }
+}
+
+var newList = new DoublyLinkedList();  
+newList.add(1);  
+newList.add(2);  
+newList.add(3);  
+newList.remove(0);  
+console.log(newList.head);  
+&lt;/code&gt;&lt;/pre&gt;</content:encoded></item><item><title>Last week of work, moving to Cali, seeing Christine</title><description>&lt;p&gt;Here are thoughts in my head as I sit here at my desk on a Wednesday:&lt;/p&gt;
+
+&lt;p&gt;I am halfway through the last week of work for Starbucks. &lt;/p&gt;
+
+&lt;p&gt;Last night at Foundation Crossfit, Tina, Sarah, and Margot comforted me about my situation. I admire those women greatly, and all the more&lt;/p&gt;</description><link>http://localhost:2368/last-week-of-work/</link><guid isPermaLink="false">e537a36e-5a2f-464a-b22b-affb780c1afb</guid><dc:creator>Alex Stark</dc:creator><pubDate>Wed, 25 May 2016 17:43:32 GMT</pubDate><content:encoded>&lt;p&gt;Here are thoughts in my head as I sit here at my desk on a Wednesday:&lt;/p&gt;
+
+&lt;p&gt;I am halfway through the last week of work for Starbucks. &lt;/p&gt;
+
+&lt;p&gt;Last night at Foundation Crossfit, Tina, Sarah, and Margot comforted me about my situation. I admire those women greatly, and all the more so for their compassion. &lt;/p&gt;
+
+&lt;p&gt;I hate saying goodbye; and it's not because saying goodbye is too emotional or sad. It just seems odd to me to make all this time now to connect with people. A relationship is built on the daily actions, activities, and sharing with one another. Whether or not we have a chance to "say goodbye" doesn't affect that. It's "see you when I see you"...which is the way it is most of the time. You never know what will happen to you or others. &lt;/p&gt;
+
+&lt;p&gt;I've told all of the teams that I work with that my last day will be Friday. There's going to be a large coffee tasting for all of the great people that I've met here. I have 1:1 connections with people who won't be able to attend. Some people are shocked, others are excited, and everyone is supportive.&lt;/p&gt;
+
+&lt;p&gt;Though I had been ready to consider moving for bootcamp in June, the decision to bootcamp right now was influenced by Christine's (my girlfriend) situation. For those that don't know, Christine had a neurological episode that we believe is a form of relapsing-remitting MS. I took her to the hospital on 4/25, where we heard the diagnosis for the first time. We spent the next several days in an adrenaline haze. I don't remember much of the week. We revisited the hospital many, many times...struggling through the administrative gauntlet as we tried to better understand how to manage her condition.&lt;/p&gt;
+
+&lt;p&gt;The week after her attack, she began to steadily improve and her grandma came to take care of her. Granny Bazeghi took her back to Santa Barbara about a week later.&lt;/p&gt;
+
+&lt;p&gt;Having been apart for a couple of weeks, which is not very fun, we thought about how we'd manage future situations. &lt;/p&gt;
+
+&lt;p&gt;We need to live in California. Our families and support structures are all there. We're going to establish home as a place neither of us have ever lived. &lt;/p&gt;
+
+&lt;p&gt;Christine has continued to improve and is even driving herself to coffee shops now. We'll meet up this Saturday and spend the week together before my bootcamp begins. The plan is that she'll join in mid-July, or potentially earlier (pending her recovery). &lt;/p&gt;
+
+&lt;p&gt;We're doing a lot all at once. With Christine's attack, I've decided I'd rather do bootcamp right now and be closer to her. Simultaneously, she will do her remote program as she recovers. In addition, we're continuing to see neurologists while we adjust to life in California. &lt;/p&gt;
+
+&lt;p&gt;We both laughed last night at how poor we are. This is a hard time financially, but we're hoping this will be a fun time to look back on. That time when we were poor and had to ask our family members for money. Our families have been wonderfully supportive, and that's a gift. &lt;/p&gt;
+
+&lt;p&gt;Onto the next adventure. &lt;/p&gt;
+
+&lt;p&gt;&lt;img src="http://localhost:2368/content/images/2016/05/IMG_0307.jpg" alt="" a="" pic="" of="" christine="" and="" me""=""&gt;&lt;/p&gt;</content:encoded></item><item><title>My journey to HR</title><description>&lt;p&gt;I think it's important to note that I did not pass the technical interview the first time...or the second time. &lt;/p&gt;
 
 &lt;p&gt;Getting into HR required a lot of studying. I &lt;strong&gt;did not&lt;/strong&gt; remotely think that I would be this far along before even starting a bootcamp. It really seems like&lt;/p&gt;</description><link>http://localhost:2368/my-journey-to-hr/</link><guid isPermaLink="false">bb08dc59-df15-4a35-a46d-b86c5a2ac048</guid><dc:creator>Alex Stark</dc:creator><pubDate>Sat, 21 May 2016 15:44:42 GMT</pubDate><content:encoded>&lt;p&gt;I think it's important to note that I did not pass the technical interview the first time...or the second time. &lt;/p&gt;
 

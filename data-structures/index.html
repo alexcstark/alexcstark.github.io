@@ -1,0 +1,293 @@
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>Data structures</title>
+    <meta name="description" content="">
+
+    <meta name="HandheldFriendly" content="True">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="shortcut icon" href="../favicon.ico">
+
+    <link rel="stylesheet" type="text/css" href="../assets/css/screen.css?v=dd05828fca">
+    <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Merriweather:300,700,700italic,300italic%7COpen+Sans:700,400">
+
+    <link rel="canonical" href="index.html">
+    <meta name="referrer" content="origin">
+    
+    <meta property="og:site_name" content="In a cave, with a box of scraps">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Data structures">
+    <meta property="og:description" content="I've spent some time coding out classic data structures. I'll briefly cover the following:   Linked list Doubly linked list Binary Search Tree Graph Linked List class Node {     constructor(data, next){     this.data = data;     this.next = next || null;   } } class LinkedList {     constructor(...">
+    <meta property="og:url" content="http://localhost:2368/data-structures/">
+    <meta property="article:published_time" content="2016-05-25T18:10:54.586Z">
+    <meta property="article:modified_time" content="2016-05-25T18:10:54.585Z">
+    
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Data structures">
+    <meta name="twitter:description" content="I've spent some time coding out classic data structures. I'll briefly cover the following:   Linked list Doubly linked list Binary Search Tree Graph Linked List class Node {     constructor(data, next){     this.data = data;     this.next = next || null;   } } class LinkedList {     constructor(...">
+    <meta name="twitter:url" content="http://localhost:2368/data-structures/">
+    
+    <script type="application/ld+json">
+{
+    "@context": "http://schema.org",
+    "@type": "Article",
+    "publisher": "In a cave, with a box of scraps",
+    "author": {
+        "@type": "Person",
+        "name": "Alex Stark",
+        "url": "http://localhost:2368/author/alexander",
+        "sameAs": null,
+        "description": null
+    },
+    "headline": "Data structures",
+    "url": "http://localhost:2368/data-structures/",
+    "datePublished": "2016-05-25T18:10:54.586Z",
+    "dateModified": "2016-05-25T18:10:54.585Z",
+    "description": "I&#x27;ve spent some time coding out classic data structures. I&#x27;ll briefly cover the following:   Linked list Doubly linked list Binary Search Tree Graph Linked List class Node {     constructor(data, next){     this.data = data;     this.next = next || null;   } } class LinkedList {     constructor(..."
+}
+    </script>
+
+    <meta name="generator" content="Ghost 0.7">
+    <link rel="alternate" type="application/rss+xml" title="In a cave, with a box of scraps" href="../rss/index.html">
+</head>
+<body class="post-template nav-closed">
+
+    <div class="nav">
+    <h3 class="nav-title">Menu</h3>
+    <a href="index.html#" class="nav-close">
+        <span class="hidden">Close</span>
+    </a>
+    <ul>
+            <li class="nav-home" role="presentation"><a href="../">Home</a></li>
+            <li class="nav-portfolio" role="presentation"><a href="http://localhost:2368/portfolio">Portfolio</a></li>
+            <li class="nav-about-me" role="presentation"><a href="http://localhost:2368/aboutme">About Me</a></li>
+    </ul>
+    <a class="subscribe-button icon-feed" href="../rss/index.rss">Subscribe</a>
+</div>
+<span class="nav-cover"></span>
+
+
+    <div class="site-wrapper">
+
+        
+
+
+<header class="main-header post-head no-cover">
+    <nav class="main-nav  clearfix">
+        <a class="blog-logo" href="../"><img src="../content/images/2016/05/Box-Open-icon.png" alt="In a cave, with a box of scraps"></a>
+            <a class="menu-button icon-menu" href="index.html#"><span class="word">Menu</span></a>
+    </nav>
+</header>
+
+<main class="content" role="main">
+    <article class="post">
+
+        <header class="post-header">
+            <h1 class="post-title">Data structures</h1>
+            <section class="post-meta">
+                <time class="post-date" datetime="2016-05-25">25 May 2016</time> 
+            </section>
+        </header>
+
+        <section class="post-content">
+            <p>I've spent some time coding out classic data structures.</p>
+
+<p>I'll briefly cover the following:  </p>
+
+<ul>
+<li>Linked list</li>
+<li>Doubly linked list</li>
+<li>Binary Search Tree</li>
+<li>Graph</li>
+</ul>
+
+<p><strong>Linked List</strong></p>
+
+<pre><code class="language-javascript">class Node {  
+  constructor(data, next){
+    this.data = data;
+    this.next = next || null;
+  }
+}
+class LinkedList {  
+  constructor(){
+    this.head = null;
+    this.length = 0;
+  }
+
+  add(data){
+    var node = new Node(data);
+    var current = this.head;
+    if(this.head !== null){
+      while(current.next){
+        current = current.next;
+      }
+      current.next = node;
+    } else {
+      this.head = node;
+    }
+    this.length++;
+    return this.head;
+  }
+
+  remove(index){
+    if(index &lt; 0 || index &gt; this.length) return "ERROR";
+
+    if(this.head === null) return "Nothing to remove";
+    if(index === 0){
+      this.head = this.head.next;
+    } else {
+      var current = this.head;
+      while(index &gt; 1){
+        current = current.next;
+        index--;
+      }
+      current.next = current.next.next
+      return this.head
+    }
+  }
+}
+
+var newList = new LinkedList();  
+newList.add(1);  
+newList.add(2);  
+newList.add(3);  
+newList.remove(0);  
+console.log(newList.head);
+
+
+function generateLinkedLists(arrayofData){  
+  var nodeStorage = {};
+  arrayofData.forEach((data, i) =&gt; {
+    nodeStorage['node' + i] = new Node(data);
+    if(i !== 0){
+      nodeStorage['node' + (i - 1)].next = nodeStorage['node' + i]
+    }
+  });
+  return nodeStorage['node0'];
+}
+</code></pre>
+
+<p><strong>Doubly Linked List</strong></p>
+
+<pre><code class="language-javascript">class Node {  
+  constructor(data, next, prev){
+    this.data = data;
+    this.next = next || null;
+    this.prev = prev || null;
+  }
+}
+class DoublyLinkedList {  
+  constructor(){
+    this.head = null;
+    this.tail = null
+    this.length = 0;
+  }
+
+  add(data){
+    var node = new Node(data);
+    var current = this.head;
+    if(this.head !== null){
+      while(current.next){
+        current = current.next;
+      }
+      current.next = node;
+      node.prev = current;
+      this.tail = node;
+    } else {
+      this.head = node;
+    }
+    this.length++;
+    return this.head;
+  }
+
+  remove(index){
+    if(index &lt; 0 || index &gt; this.length) return "ERROR";
+
+    if(this.head === null) return "Nothing to remove";
+    if(index === 0){
+      this.head = this.head.next;
+      this.head.prev = null;
+    } else {
+      var current = this.head;
+      while(index &gt; 1){
+        current = current.next;
+        index--;
+      }
+      current.next = current.next.next;
+      current.next.next.prev = current.next;
+      return this.head
+    }
+  }
+}
+
+var newList = new DoublyLinkedList();  
+newList.add(1);  
+newList.add(2);  
+newList.add(3);  
+newList.remove(0);  
+console.log(newList.head);  
+</code></pre>
+        </section>
+
+        <footer class="post-footer">
+
+
+
+            <section class="author">
+                <h4><a href="../author/alexander/">Alex Stark</a></h4>
+
+                    <p>Read <a href="../author/alexander/">more posts</a> by this author.</p>
+                <div class="author-meta">
+                    <span class="author-location icon-location">San Francisco, CA</span>
+                    
+                </div>
+            </section>
+
+
+            <section class="share">
+                <h4>Share this post</h4>
+                <a class="icon-twitter" href="https://twitter.com/intent/tweet?text=Data%20structures&amp;url=http://localhost:2368/data-structures/" onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+                    <span class="hidden">Twitter</span>
+                </a>
+                <a class="icon-facebook" href="https://www.facebook.com/sharer/sharer.php?u=http://localhost:2368/data-structures/" onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
+                    <span class="hidden">Facebook</span>
+                </a>
+                <a class="icon-google-plus" href="https://plus.google.com/share?url=http://localhost:2368/data-structures/" onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
+                    <span class="hidden">Google+</span>
+                </a>
+            </section>
+
+        </footer>
+
+    </article>
+</main>
+
+<aside class="read-next">
+    <a class="read-next-story prev no-cover" href="../last-week-of-work/">
+        <section class="post">
+            <h2>Last week of work, moving to Cali, seeing Christine</h2>
+            <p>Here are thoughts in my head as I sit here at my desk on a Wednesday: I am halfway…</p>
+        </section>
+    </a>
+</aside>
+
+
+
+        <footer class="site-footer clearfix">
+            <section class="copyright"><a href="../">In a cave, with a box of scraps</a> © 2016</section>
+            <section class="poweredby">Proudly published with <a href="https://ghost.org">Ghost</a></section>
+        </footer>
+
+    </div>
+
+    
+
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script type="text/javascript" src="../assets/js/jquery.fitvids.js?v=dd05828fca"></script>
+    <script type="text/javascript" src="../assets/js/index.js?v=dd05828fca"></script>
+
+</body>
