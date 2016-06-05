@@ -1,4 +1,4 @@
-<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:media="http://search.yahoo.com/mrss/" version="2.0"><channel><title>In a cave, with a box of scraps</title><description>An account of my journey to become a software engineer. </description><link>http://localhost:2368/</link><generator>Ghost 0.7</generator><lastBuildDate>Sun, 05 Jun 2016 23:22:34 GMT</lastBuildDate><atom:link href="http://localhost:2368/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title>Moved to SF - I start tomorrow</title><description>&lt;p&gt;I've already fallen into the trap that most of these bloggers do...I've become super busy. Some of what prevents me from writing is wanting to be awake and careful with my words. Perhaps if I simple take a stream-of-consciousness approach to writing, I'll generate more content...&lt;/p&gt;
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:media="http://search.yahoo.com/mrss/" version="2.0"><channel><title>In a cave, with a box of scraps</title><description>An account of my journey to become a software engineer. </description><link>http://localhost:2368/</link><generator>Ghost 0.7</generator><lastBuildDate>Sun, 05 Jun 2016 23:41:04 GMT</lastBuildDate><atom:link href="http://localhost:2368/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title>Moved to SF - I start tomorrow</title><description>&lt;p&gt;I've already fallen into the trap that most of these bloggers do...I've become super busy. Some of what prevents me from writing is wanting to be awake and careful with my words. Perhaps if I simple take a stream-of-consciousness approach to writing, I'll generate more content...&lt;/p&gt;
 
 &lt;p&gt;I drove down&lt;/p&gt;</description><link>http://localhost:2368/moved-to-sf-i-start-tomorrw/</link><guid isPermaLink="false">9805b9ea-9eff-4f78-b5ba-514aae0e38c1</guid><dc:creator>Alex Stark</dc:creator><pubDate>Sun, 05 Jun 2016 23:22:28 GMT</pubDate><content:encoded>&lt;p&gt;I've already fallen into the trap that most of these bloggers do...I've become super busy. Some of what prevents me from writing is wanting to be awake and careful with my words. Perhaps if I simple take a stream-of-consciousness approach to writing, I'll generate more content...&lt;/p&gt;
 
@@ -14,42 +14,33 @@
 
 &lt;p&gt;I'm heading to my Dad and Deb's tonight for dinner. Hopefully I'll get back early enough to get to bed on time, but I've also taken two separate 90 minute naps. My body's clock is all sorts of off and I don't have time to reset it before we begin. &lt;/p&gt;
 
-&lt;p&gt;Well then...here we go. &lt;/p&gt;</content:encoded></item><item><title>Data structures - unfinished</title><description>&lt;p&gt;I've spent some time coding out classic data structures.&lt;/p&gt;
+&lt;p&gt;Well then...here we go. &lt;/p&gt;</content:encoded></item><item><title>Data structures</title><description>&lt;p&gt;I've spent some time coding out classic data structures. While I thought that plopping my code below was what I should do...I think I'd rather try to describe these concepts in plain, old english. Email me if you want the source code!&lt;/p&gt;
 
 &lt;p&gt;I'll briefly cover the following:  &lt;/p&gt;
 
 &lt;ul&gt;
-&lt;li&gt;Linked list&lt;/li&gt;
-&lt;li&gt;Doubly linked list&lt;/li&gt;
-&lt;li&gt;Binary Search Tree&lt;/li&gt;
-&lt;li&gt;Graph&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;strong&gt;Linked List&lt;/strong&gt;&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class="language-javascript"&gt;class Node {  
-  constructor(data, next){
-    this.data = data;
-    this.next = next || null;
-  }
-}
-class LinkedList {  
-  constructor(){
-    this.head = null;
-    this.length = 0;
-  }
-
-  add(data){
-    var node&lt;/code&gt;&lt;/pre&gt;</description><link>http://localhost:2368/data-structures/</link><guid isPermaLink="false">bab506a1-5230-49f3-a558-8e9a6f12a335</guid><dc:creator>Alex Stark</dc:creator><pubDate>Wed, 25 May 2016 18:10:54 GMT</pubDate><content:encoded>&lt;p&gt;I've spent some time coding out classic data structures.&lt;/p&gt;
+&lt;li&gt;Linked list&lt;/li&gt;&lt;/ul&gt;</description><link>http://localhost:2368/data-structures/</link><guid isPermaLink="false">bab506a1-5230-49f3-a558-8e9a6f12a335</guid><dc:creator>Alex Stark</dc:creator><pubDate>Wed, 25 May 2016 18:10:54 GMT</pubDate><content:encoded>&lt;p&gt;I've spent some time coding out classic data structures. While I thought that plopping my code below was what I should do...I think I'd rather try to describe these concepts in plain, old english. Email me if you want the source code!&lt;/p&gt;
 
 &lt;p&gt;I'll briefly cover the following:  &lt;/p&gt;
 
 &lt;ul&gt;
-&lt;li&gt;Linked list&lt;/li&gt;
-&lt;li&gt;Doubly linked list&lt;/li&gt;
-&lt;li&gt;Binary Search Tree&lt;/li&gt;
-&lt;li&gt;Graph&lt;/li&gt;
+&lt;li&gt;Linked list
+&lt;ul&gt;&lt;li&gt;Has a list of &lt;strong&gt;nodes&lt;/strong&gt; with the following properties
+&lt;ul&gt;&lt;li&gt;&lt;code&gt;data&lt;/code&gt; - or other information it's holding&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;next&lt;/code&gt; - the location of the next node that has information&lt;/li&gt;&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;the list itself holds access to the &lt;code&gt;head&lt;/code&gt; node as well as methods like add, remove, sort, etc....&lt;/li&gt;&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;Doubly linked list
+&lt;ul&gt;&lt;li&gt;like the above, but it keeps track of previous nodes as well
+&lt;ul&gt;&lt;li&gt;&lt;strong&gt;node&lt;/strong&gt; - &lt;code&gt;data&lt;/code&gt;, &lt;code&gt;next&lt;/code&gt;, &lt;code&gt;prev&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;list&lt;/strong&gt; - &lt;code&gt;head&lt;/code&gt;, &lt;code&gt;tail&lt;/code&gt;, other methods&lt;/li&gt;&lt;/ul&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;Binary Search Tree
+&lt;ul&gt;&lt;li&gt;a tree where values lower than a node are on the left and values higher are on the right&lt;/li&gt;&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;Graph
+&lt;ul&gt;&lt;li&gt;nodes with several connections and possible directions.&lt;/li&gt;
+&lt;li&gt;a graph, to me, felt a lot like a classic flow chart. Anything can connect to anything, if it makes sense&lt;/li&gt;&lt;/ul&gt;&lt;/li&gt;
 &lt;/ul&gt;
+
+&lt;p&gt;&lt;em&gt;* here is some of the code from before *&lt;/em&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;Linked List&lt;/strong&gt;&lt;/p&gt;
 

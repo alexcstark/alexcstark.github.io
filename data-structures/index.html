@@ -3,7 +3,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-    <title>Data structures - unfinished</title>
+    <title>Data structures</title>
     <meta name="description" content="">
 
     <meta name="HandheldFriendly" content="True">
@@ -11,7 +11,7 @@
 
     <link rel="shortcut icon" href="../favicon.ico">
 
-    <link rel="stylesheet" type="text/css" href="../assets/css/screen.css?v=30b215b38a">
+    <link rel="stylesheet" type="text/css" href="../assets/css/screen.css?v=36b67c70bb">
     <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Merriweather:300,700,700italic,300italic%7COpen+Sans:700,400">
 
     <link rel="canonical" href="index.html">
@@ -19,15 +19,15 @@
     
     <meta property="og:site_name" content="In a cave, with a box of scraps">
     <meta property="og:type" content="article">
-    <meta property="og:title" content="Data structures - unfinished">
-    <meta property="og:description" content="I've spent some time coding out classic data structures. I'll briefly cover the following:   Linked list Doubly linked list Binary Search Tree Graph Linked List class Node {     constructor(data, next){     this.data = data;     this.next = next || null;   } } class LinkedList {     constructor(...">
+    <meta property="og:title" content="Data structures">
+    <meta property="og:description" content="I've spent some time coding out classic data structures. While I thought that plopping my code below was what I should do...I think I'd rather try to describe these concepts in plain, old english. Email me if you want...">
     <meta property="og:url" content="http://localhost:2368/data-structures/">
     <meta property="article:published_time" content="2016-05-25T18:10:54.586Z">
-    <meta property="article:modified_time" content="2016-05-25T18:13:33.075Z">
+    <meta property="article:modified_time" content="2016-06-05T23:30:15.220Z">
     
     <meta name="twitter:card" content="summary">
-    <meta name="twitter:title" content="Data structures - unfinished">
-    <meta name="twitter:description" content="I've spent some time coding out classic data structures. I'll briefly cover the following:   Linked list Doubly linked list Binary Search Tree Graph Linked List class Node {     constructor(data, next){     this.data = data;     this.next = next || null;   } } class LinkedList {     constructor(...">
+    <meta name="twitter:title" content="Data structures">
+    <meta name="twitter:description" content="I've spent some time coding out classic data structures. While I thought that plopping my code below was what I should do...I think I'd rather try to describe these concepts in plain, old english. Email me if you want...">
     <meta name="twitter:url" content="http://localhost:2368/data-structures/">
     
     <script type="application/ld+json">
@@ -42,11 +42,11 @@
         "sameAs": null,
         "description": null
     },
-    "headline": "Data structures - unfinished",
+    "headline": "Data structures",
     "url": "http://localhost:2368/data-structures/",
     "datePublished": "2016-05-25T18:10:54.586Z",
-    "dateModified": "2016-05-25T18:13:33.075Z",
-    "description": "I&#x27;ve spent some time coding out classic data structures. I&#x27;ll briefly cover the following:   Linked list Doubly linked list Binary Search Tree Graph Linked List class Node {     constructor(data, next){     this.data = data;     this.next = next || null;   } } class LinkedList {     constructor(..."
+    "dateModified": "2016-06-05T23:30:15.220Z",
+    "description": "I&#x27;ve spent some time coding out classic data structures. While I thought that plopping my code below was what I should do...I think I&#x27;d rather try to describe these concepts in plain, old english. Email me if you want..."
 }
     </script>
 
@@ -86,23 +86,35 @@
     <article class="post">
 
         <header class="post-header">
-            <h1 class="post-title">Data structures - unfinished</h1>
+            <h1 class="post-title">Data structures</h1>
             <section class="post-meta">
                 <time class="post-date" datetime="2016-05-25">25 May 2016</time> 
             </section>
         </header>
 
         <section class="post-content">
-            <p>I've spent some time coding out classic data structures.</p>
+            <p>I've spent some time coding out classic data structures. While I thought that plopping my code below was what I should do...I think I'd rather try to describe these concepts in plain, old english. Email me if you want the source code!</p>
 
 <p>I'll briefly cover the following:  </p>
 
 <ul>
-<li>Linked list</li>
-<li>Doubly linked list</li>
-<li>Binary Search Tree</li>
-<li>Graph</li>
+<li>Linked list
+<ul><li>Has a list of <strong>nodes</strong> with the following properties
+<ul><li><code>data</code> - or other information it's holding</li>
+<li><code>next</code> - the location of the next node that has information</li></ul></li>
+<li>the list itself holds access to the <code>head</code> node as well as methods like add, remove, sort, etc....</li></ul></li>
+<li>Doubly linked list
+<ul><li>like the above, but it keeps track of previous nodes as well
+<ul><li><strong>node</strong> - <code>data</code>, <code>next</code>, <code>prev</code></li>
+<li><strong>list</strong> - <code>head</code>, <code>tail</code>, other methods</li></ul></li></ul></li>
+<li>Binary Search Tree
+<ul><li>a tree where values lower than a node are on the left and values higher are on the right</li></ul></li>
+<li>Graph
+<ul><li>nodes with several connections and possible directions.</li>
+<li>a graph, to me, felt a lot like a classic flow chart. Anything can connect to anything, if it makes sense</li></ul></li>
 </ul>
+
+<p><em>* here is some of the code from before *</em></p>
 
 <p><strong>Linked List</strong></p>
 
@@ -250,7 +262,7 @@ console.log(newList.head);
 
             <section class="share">
                 <h4>Share this post</h4>
-                <a class="icon-twitter" href="https://twitter.com/intent/tweet?text=Data%20structures%20-%20unfinished&amp;url=http://localhost:2368/data-structures/" onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+                <a class="icon-twitter" href="https://twitter.com/intent/tweet?text=Data%20structures&amp;url=http://localhost:2368/data-structures/" onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
                     <span class="hidden">Twitter</span>
                 </a>
                 <a class="icon-facebook" href="https://www.facebook.com/sharer/sharer.php?u=http://localhost:2368/data-structures/" onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
@@ -293,7 +305,7 @@ console.log(newList.head);
     
 
     <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
-    <script type="text/javascript" src="../assets/js/jquery.fitvids.js?v=30b215b38a"></script>
-    <script type="text/javascript" src="../assets/js/index.js?v=30b215b38a"></script>
+    <script type="text/javascript" src="../assets/js/jquery.fitvids.js?v=36b67c70bb"></script>
+    <script type="text/javascript" src="../assets/js/index.js?v=36b67c70bb"></script>
 
 </body>
