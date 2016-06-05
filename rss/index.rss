@@ -1,4 +1,20 @@
-<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:media="http://search.yahoo.com/mrss/" version="2.0"><channel><title>In a cave, with a box of scraps</title><description>An account of my journey to become a software engineer. </description><link>http://localhost:2368/</link><generator>Ghost 0.7</generator><lastBuildDate>Wed, 25 May 2016 18:13:36 GMT</lastBuildDate><atom:link href="http://localhost:2368/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title>Data structures - unfinished</title><description>&lt;p&gt;I've spent some time coding out classic data structures.&lt;/p&gt;
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:media="http://search.yahoo.com/mrss/" version="2.0"><channel><title>In a cave, with a box of scraps</title><description>An account of my journey to become a software engineer. </description><link>http://localhost:2368/</link><generator>Ghost 0.7</generator><lastBuildDate>Sun, 05 Jun 2016 23:22:34 GMT</lastBuildDate><atom:link href="http://localhost:2368/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title>Moved to SF - I start tomorrow</title><description>&lt;p&gt;I've already fallen into the trap that most of these bloggers do...I've become super busy. Some of what prevents me from writing is wanting to be awake and careful with my words. Perhaps if I simple take a stream-of-consciousness approach to writing, I'll generate more content...&lt;/p&gt;
+
+&lt;p&gt;I drove down&lt;/p&gt;</description><link>http://localhost:2368/moved-to-sf-i-start-tomorrw/</link><guid isPermaLink="false">9805b9ea-9eff-4f78-b5ba-514aae0e38c1</guid><dc:creator>Alex Stark</dc:creator><pubDate>Sun, 05 Jun 2016 23:22:28 GMT</pubDate><content:encoded>&lt;p&gt;I've already fallen into the trap that most of these bloggers do...I've become super busy. Some of what prevents me from writing is wanting to be awake and careful with my words. Perhaps if I simple take a stream-of-consciousness approach to writing, I'll generate more content...&lt;/p&gt;
+
+&lt;p&gt;I drove down to SF last Saturday and stayed with my Dad and Deb. Christine met me there and we explored Berkeley a bit as well as the city. She'll join me in the middle of next month!&lt;/p&gt;
+
+&lt;p&gt;I am now living in Cohort X, a housing option created specifically for bootcamp students. All of my now roommates are 20 and 30 somethings; and super techie. We'll sit around and discuss coding, math, or philosophy. It's pretty great.&lt;/p&gt;
+
+&lt;p&gt;The place is in the north mission on 15th and Folsom. The immediate area is fine, but I dread having to take the 16th and Mission BART. Having lived in Seattle, I've been around a few homeless and alternative lifestyle people. The mission is a big step up in terms of volume of homeless and range of behaviors. Fortunately, they actually seem more polite here. It will continue to be a learning and growth opportunity.&lt;/p&gt;
+
+&lt;p&gt;Last night I walked home from a bar called 21st amendment after a meet-up with my cohort. The first part of the walk through SOMA was great, but as you pass the hall of justice and the two dozen "bail bonds" offices, it becomes uncomfortable. &lt;/p&gt;
+
+&lt;p&gt;I'm restless. I can't believe that I start tomorrow at 8:30 AM. I constantly feel like I need to be studying; that somehow if I'm not working, I'm jeopardizing my future. &lt;/p&gt;
+
+&lt;p&gt;I'm heading to my Dad and Deb's tonight for dinner. Hopefully I'll get back early enough to get to bed on time, but I've also taken two separate 90 minute naps. My body's clock is all sorts of off and I don't have time to reset it before we begin. &lt;/p&gt;
+
+&lt;p&gt;Well then...here we go. &lt;/p&gt;</content:encoded></item><item><title>Data structures - unfinished</title><description>&lt;p&gt;I've spent some time coding out classic data structures.&lt;/p&gt;
 
 &lt;p&gt;I'll briefly cover the following:  &lt;/p&gt;
 
