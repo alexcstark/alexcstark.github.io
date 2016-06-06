@@ -1,4 +1,24 @@
-<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:media="http://search.yahoo.com/mrss/" version="2.0"><channel><title>In a cave, with a box of scraps</title><description>An account of my journey to become a software engineer. </description><link>http://localhost:2368/</link><generator>Ghost 0.7</generator><lastBuildDate>Sun, 05 Jun 2016 23:41:04 GMT</lastBuildDate><atom:link href="http://localhost:2368/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title>Moved to SF - I start tomorrow</title><description>&lt;p&gt;I've already fallen into the trap that most of these bloggers do...I've become super busy. Some of what prevents me from writing is wanting to be awake and careful with my words. Perhaps if I simple take a stream-of-consciousness approach to writing, I'll generate more content...&lt;/p&gt;
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:media="http://search.yahoo.com/mrss/" version="2.0"><channel><title>In a cave, with a box of scraps</title><description>An account of my journey to become a software engineer. </description><link>http://localhost:2368/</link><generator>Ghost 0.7</generator><lastBuildDate>Mon, 06 Jun 2016 13:50:37 GMT</lastBuildDate><atom:link href="http://localhost:2368/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title>QuickSort</title><description>&lt;p&gt;I just figured out quicksort today. Let's see if I can make sense of it.&lt;/p&gt;
+
+&lt;p&gt;Quicksort is a sorting algorithm used to put items in order and is considered one of the most efficient ways of doing so (average run time &lt;code&gt;O(n log n)&lt;/code&gt;).&lt;/p&gt;
+
+&lt;p&gt;For this example list, I'll&lt;/p&gt;</description><link>http://localhost:2368/algorithms/</link><guid isPermaLink="false">59732d0e-fdeb-440f-965b-48cfe58fb186</guid><dc:creator>Alex Stark</dc:creator><pubDate>Mon, 06 Jun 2016 13:50:32 GMT</pubDate><content:encoded>&lt;p&gt;I just figured out quicksort today. Let's see if I can make sense of it.&lt;/p&gt;
+
+&lt;p&gt;Quicksort is a sorting algorithm used to put items in order and is considered one of the most efficient ways of doing so (average run time &lt;code&gt;O(n log n)&lt;/code&gt;).&lt;/p&gt;
+
+&lt;p&gt;For this example list, I'll describe how it works &lt;br&gt;
+9 0 8 7 3 2 1 5&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;You start with one of the values in the list. By convention, we pick the last number, "5". We call this our &lt;strong&gt;pivot.&lt;/strong&gt; 
+&lt;ul&gt;&lt;li&gt;The goal is now to put everything lower than the pivot to the left of it and everything higher than the pivot to the right of it. We do this in two partitions, the leftPartition and the rightPartition. &lt;br&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;leftPartition will be 0 3 2 1&lt;/li&gt;
+&lt;li&gt;rightPartition will be 9 8 7 &lt;/li&gt;
+&lt;li&gt;we now have 0 3 2 1 || 9 8 7 [5]&lt;/li&gt;
+&lt;li&gt;insert the 5 into the front-end of the rightpartition&lt;/li&gt;
+&lt;li&gt;0 3 2 1 || 5 9 8 7&lt;/li&gt;
+&lt;li&gt;rinse and repeat for the two smaller partitions&lt;/li&gt;
+&lt;/ul&gt;</content:encoded></item><item><title>Moved to SF - I start tomorrow</title><description>&lt;p&gt;I've already fallen into the trap that most of these bloggers do...I've become super busy. Some of what prevents me from writing is wanting to be awake and careful with my words. Perhaps if I simple take a stream-of-consciousness approach to writing, I'll generate more content...&lt;/p&gt;
 
 &lt;p&gt;I drove down&lt;/p&gt;</description><link>http://localhost:2368/moved-to-sf-i-start-tomorrw/</link><guid isPermaLink="false">9805b9ea-9eff-4f78-b5ba-514aae0e38c1</guid><dc:creator>Alex Stark</dc:creator><pubDate>Sun, 05 Jun 2016 23:22:28 GMT</pubDate><content:encoded>&lt;p&gt;I've already fallen into the trap that most of these bloggers do...I've become super busy. Some of what prevents me from writing is wanting to be awake and careful with my words. Perhaps if I simple take a stream-of-consciousness approach to writing, I'll generate more content...&lt;/p&gt;
 
