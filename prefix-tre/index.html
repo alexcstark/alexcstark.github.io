@@ -1,0 +1,249 @@
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>Prefix Tree and Autocomplete</title>
+    <meta name="description" content="">
+
+    <meta name="HandheldFriendly" content="True">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="shortcut icon" href="../favicon.ico">
+
+    <link rel="stylesheet" type="text/css" href="../assets/css/screen.css?v=cf6b372415">
+    <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Merriweather:300,700,700italic,300italic%7COpen+Sans:700,400">
+
+    <link rel="canonical" href="index.html">
+    <meta name="referrer" content="origin">
+    
+    <meta property="og:site_name" content="In a cave, with a box of scraps">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Prefix Tree and Autocomplete">
+    <meta property="og:description" content="Yesterday, I got a good way through prefix tree. A prefix tree is a data structure that holds stringed keys in an accumulating fashion. The conceptualization piece of this is a bit tricky and here is my current understanding.  Let's...">
+    <meta property="og:url" content="http://localhost:2368/prefix-tre/">
+    <meta property="article:published_time" content="2016-06-13T15:02:36.447Z">
+    <meta property="article:modified_time" content="2016-06-13T15:02:36.446Z">
+    
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Prefix Tree and Autocomplete">
+    <meta name="twitter:description" content="Yesterday, I got a good way through prefix tree. A prefix tree is a data structure that holds stringed keys in an accumulating fashion. The conceptualization piece of this is a bit tricky and here is my current understanding.  Let's...">
+    <meta name="twitter:url" content="http://localhost:2368/prefix-tre/">
+    
+    <script type="application/ld+json">
+{
+    "@context": "http://schema.org",
+    "@type": "Article",
+    "publisher": "In a cave, with a box of scraps",
+    "author": {
+        "@type": "Person",
+        "name": "Alex Stark",
+        "url": "http://localhost:2368/author/alexander",
+        "sameAs": null,
+        "description": null
+    },
+    "headline": "Prefix Tree and Autocomplete",
+    "url": "http://localhost:2368/prefix-tre/",
+    "datePublished": "2016-06-13T15:02:36.447Z",
+    "dateModified": "2016-06-13T15:02:36.446Z",
+    "description": "Yesterday, I got a good way through prefix tree. A prefix tree is a data structure that holds stringed keys in an accumulating fashion. The conceptualization piece of this is a bit tricky and here is my current understanding.  Let&#x27;s..."
+}
+    </script>
+
+    <meta name="generator" content="Ghost 0.7">
+    <link rel="alternate" type="application/rss+xml" title="In a cave, with a box of scraps" href="../rss/index.html">
+</head>
+<body class="post-template nav-closed">
+
+    <div class="nav">
+    <h3 class="nav-title">Menu</h3>
+    <a href="index.html#" class="nav-close">
+        <span class="hidden">Close</span>
+    </a>
+    <ul>
+            <li class="nav-home" role="presentation"><a href="../">Home</a></li>
+            <li class="nav-portfolio" role="presentation"><a href="http://localhost:2368/portfolio">Portfolio</a></li>
+            <li class="nav-about-me" role="presentation"><a href="http://localhost:2368/aboutme">About Me</a></li>
+    </ul>
+    <a class="subscribe-button icon-feed" href="../rss/index.rss">Subscribe</a>
+</div>
+<span class="nav-cover"></span>
+
+
+    <div class="site-wrapper">
+
+        
+
+
+<header class="main-header post-head no-cover">
+    <nav class="main-nav  clearfix">
+        <a class="blog-logo" href="../"><img src="../content/images/2016/05/Box-Open-icon.png" alt="In a cave, with a box of scraps"></a>
+            <a class="menu-button icon-menu" href="index.html#"><span class="word">Menu</span></a>
+    </nav>
+</header>
+
+<main class="content" role="main">
+    <article class="post">
+
+        <header class="post-header">
+            <h1 class="post-title">Prefix Tree and Autocomplete</h1>
+            <section class="post-meta">
+                <time class="post-date" datetime="2016-06-13">13 June 2016</time> 
+            </section>
+        </header>
+
+        <section class="post-content">
+            <p>Yesterday, I got a good way through prefix tree. A prefix tree is a data structure that holds stringed keys in an accumulating fashion.</p>
+
+<p>The conceptualization piece of this is a bit tricky and here is my current understanding. </p>
+
+<p>Let's say we want to store two greetings: 'hey' and 'hello'. We'd make a tree like the below.</p>
+
+<pre><code>                    H
+                 (H)e
+              (He)l  (He)y
+             (Hel)l
+            (Hell)o
+</code></pre>
+
+<p>Then we need to make choices about how to model this in javascript. I've decided that we need a tree to hold nodes, and nodes that have information regarding the current set of letters, the next letters(if any), whether it's the start of a word, or the end of a word. See below.  </p>
+
+<pre><code>class PrefixTree {  
+  constructor() {
+    this.root = new PrefixNode('');
+    this._currentNode = this.root;
+    this.wordSoFar = [];
+  }
+
+class PrefixNode {  
+  constructor(letter) {
+    this.letter = letter;
+    this.next = {};
+    this.start = this.letter === '' ? true : false;
+    this.end = false;
+  }
+}
+</code></pre>
+
+<p>I now want to be able to insert new words. Below is my strategy for breaking words up into subcomponents and storing them in the appropriate nodes in the tree.  </p>
+
+<pre><code>  insert(word) {
+    let currentLetter = this.root;
+    word = word.split('');
+    let lettersSoFar = '';
+
+    while (word.length) {
+      lettersSoFar = lettersSoFar + word.shift();
+      if (currentLetter.next[lettersSoFar] === undefined) {
+        currentLetter.next[lettersSoFar] = new PrefixNode(lettersSoFar);
+      }
+      currentLetter = currentLetter.next[lettersSoFar];
+    }
+
+    currentLetter.end = true;
+
+    return this.root;
+  }
+</code></pre>
+
+<p>A contains method is needed to check the existence of words in the dictionary.  </p>
+
+<pre><code>contains(word) {  
+    let currentLetter = this.root;
+    word = word.split('');
+    let lettersSoFar = '';
+
+    while (word.length &amp;&amp; currentLetter.next[lettersSoFar + word[0]]) {
+      lettersSoFar = lettersSoFar + word.shift();
+      currentLetter = currentLetter.next[lettersSoFar];
+    }
+
+    return currentLetter.end;
+  }
+</code></pre>
+
+<p>And now I want to show my naive attempt at auto complete. The enter method will allow a user to enter letters, one-by-one. <br>
+On every entry, the closeToWord method is run. Right now, closeToWord simply checks if the next set of nodes have a .end property, meaning they end a word. If the user is one node away from finishing a word, we return back to them the most likely letter. </p>
+
+<p>If we were to expand this, the close to word algorithm would check multiple sets of nodes for frequency and as a user enters words, change the value of certain words to ensure that the words they type most are the most likely result of autocomplete.  </p>
+
+<pre><code>  enter(letter) {
+    this.wordSoFar.push(letter);
+    console.log(letter);
+    console.log(this.wordSoFar);
+    this._currentNode = this._currentNode.next[this.wordSoFar.join('')];
+    console.log(this._currentNode);
+    return this.closeToWord(this._currentNode);
+  }
+
+  closeToWord(node) {
+    // Find nearby nodes that have a .end true property
+    for (var letter in node.next) {
+      console.log(letter);
+      if (node.next[letter].end) {
+        return letter;
+      }
+    }
+    return false;
+  }
+</code></pre>
+        </section>
+
+        <footer class="post-footer">
+
+
+
+            <section class="author">
+                <h4><a href="../author/alexander/">Alex Stark</a></h4>
+
+                    <p>Read <a href="../author/alexander/">more posts</a> by this author.</p>
+                <div class="author-meta">
+                    <span class="author-location icon-location">San Francisco, CA</span>
+                    
+                </div>
+            </section>
+
+
+            <section class="share">
+                <h4>Share this post</h4>
+                <a class="icon-twitter" href="https://twitter.com/intent/tweet?text=Prefix%20Tree%20and%20Autocomplete&amp;url=http://localhost:2368/prefix-tre/" onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+                    <span class="hidden">Twitter</span>
+                </a>
+                <a class="icon-facebook" href="https://www.facebook.com/sharer/sharer.php?u=http://localhost:2368/prefix-tre/" onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
+                    <span class="hidden">Facebook</span>
+                </a>
+                <a class="icon-google-plus" href="https://plus.google.com/share?url=http://localhost:2368/prefix-tre/" onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
+                    <span class="hidden">Google+</span>
+                </a>
+            </section>
+
+        </footer>
+
+    </article>
+</main>
+
+<aside class="read-next">
+    <a class="read-next-story prev no-cover" href="../week-1-thoughts/">
+        <section class="post">
+            <h2>Week 1 Thoughts</h2>
+            <p>Week 1 was amazing. So many new friends and great learnings. 12+ hours per day for even 6 days…</p>
+        </section>
+    </a>
+</aside>
+
+
+
+        <footer class="site-footer clearfix">
+            <section class="copyright"><a href="../">In a cave, with a box of scraps</a> © 2016</section>
+            <section class="poweredby">Proudly published with <a href="https://ghost.org">Ghost</a></section>
+        </footer>
+
+    </div>
+
+    
+
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script type="text/javascript" src="../assets/js/jquery.fitvids.js?v=cf6b372415"></script>
+    <script type="text/javascript" src="../assets/js/index.js?v=cf6b372415"></script>
+
+</body>
